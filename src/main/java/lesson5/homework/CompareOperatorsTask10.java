@@ -12,14 +12,18 @@ public class CompareOperatorsTask10 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите 1-е число:");
-        if(scan.hasNextInt()){
+        if(scan.hasNextInt()) {
             int x = scan.nextInt();
             System.out.println("Введите 2-е число:");
-            int y = scan.nextInt();
-            int c=y;
-            y=x;
-            x=c;
-            System.out.println(x+"; "+y);
+            if (scan.hasNextInt()){
+                int y = scan.nextInt();
+            int c = y;
+            y = x;
+            x = c;
+            System.out.println(x + "; " + y);
+        }else{
+                System.out.println("Вы ввели не число");
+            }
         }
         else{
             System.out.println("Вы ввели не число");
